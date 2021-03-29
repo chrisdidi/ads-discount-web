@@ -31204,6 +31204,106 @@ video {
   }
 }
 
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-up {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+
+  50% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+
+  50% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+
+  50% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+
+  50% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
 .animate-none {
   -webkit-animation: none;
           animation: none;
@@ -31227,6 +31327,31 @@ video {
 .animate-bounce {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
+}
+
+.animate-slide-up-03-in {
+  -webkit-animation: slide-up 0.3s ease-in;
+          animation: slide-up 0.3s ease-in;
+}
+
+.animate-slide-up-03-out {
+  -webkit-animation: slide-up 0.3s ease-out;
+          animation: slide-up 0.3s ease-out;
+}
+
+.animate-slide-left-06-out {
+  -webkit-animation: slide-left 0.6s ease-out;
+          animation: slide-left 0.6s ease-out;
+}
+
+.animate-slide-up-1-in {
+  -webkit-animation: slide-up 1s ease-in;
+          animation: slide-up 1s ease-in;
+}
+
+.animate-slide-up-1-out {
+  -webkit-animation: slide-up 1s ease-out;
+          animation: slide-up 1s ease-out;
 }
 
 @media (min-width: 640px) {
@@ -61820,6 +61945,31 @@ video {
   .sm\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .sm\:animate-slide-up-03-in {
+    -webkit-animation: slide-up 0.3s ease-in;
+            animation: slide-up 0.3s ease-in;
+  }
+
+  .sm\:animate-slide-up-03-out {
+    -webkit-animation: slide-up 0.3s ease-out;
+            animation: slide-up 0.3s ease-out;
+  }
+
+  .sm\:animate-slide-left-06-out {
+    -webkit-animation: slide-left 0.6s ease-out;
+            animation: slide-left 0.6s ease-out;
+  }
+
+  .sm\:animate-slide-up-1-in {
+    -webkit-animation: slide-up 1s ease-in;
+            animation: slide-up 1s ease-in;
+  }
+
+  .sm\:animate-slide-up-1-out {
+    -webkit-animation: slide-up 1s ease-out;
+            animation: slide-up 1s ease-out;
   }
 }
 
@@ -92415,6 +92565,31 @@ video {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
+
+  .md\:animate-slide-up-03-in {
+    -webkit-animation: slide-up 0.3s ease-in;
+            animation: slide-up 0.3s ease-in;
+  }
+
+  .md\:animate-slide-up-03-out {
+    -webkit-animation: slide-up 0.3s ease-out;
+            animation: slide-up 0.3s ease-out;
+  }
+
+  .md\:animate-slide-left-06-out {
+    -webkit-animation: slide-left 0.6s ease-out;
+            animation: slide-left 0.6s ease-out;
+  }
+
+  .md\:animate-slide-up-1-in {
+    -webkit-animation: slide-up 1s ease-in;
+            animation: slide-up 1s ease-in;
+  }
+
+  .md\:animate-slide-up-1-out {
+    -webkit-animation: slide-up 1s ease-out;
+            animation: slide-up 1s ease-out;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -123008,6 +123183,31 @@ video {
   .lg\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .lg\:animate-slide-up-03-in {
+    -webkit-animation: slide-up 0.3s ease-in;
+            animation: slide-up 0.3s ease-in;
+  }
+
+  .lg\:animate-slide-up-03-out {
+    -webkit-animation: slide-up 0.3s ease-out;
+            animation: slide-up 0.3s ease-out;
+  }
+
+  .lg\:animate-slide-left-06-out {
+    -webkit-animation: slide-left 0.6s ease-out;
+            animation: slide-left 0.6s ease-out;
+  }
+
+  .lg\:animate-slide-up-1-in {
+    -webkit-animation: slide-up 1s ease-in;
+            animation: slide-up 1s ease-in;
+  }
+
+  .lg\:animate-slide-up-1-out {
+    -webkit-animation: slide-up 1s ease-out;
+            animation: slide-up 1s ease-out;
   }
 }
 
@@ -153603,6 +153803,31 @@ video {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
+
+  .xl\:animate-slide-up-03-in {
+    -webkit-animation: slide-up 0.3s ease-in;
+            animation: slide-up 0.3s ease-in;
+  }
+
+  .xl\:animate-slide-up-03-out {
+    -webkit-animation: slide-up 0.3s ease-out;
+            animation: slide-up 0.3s ease-out;
+  }
+
+  .xl\:animate-slide-left-06-out {
+    -webkit-animation: slide-left 0.6s ease-out;
+            animation: slide-left 0.6s ease-out;
+  }
+
+  .xl\:animate-slide-up-1-in {
+    -webkit-animation: slide-up 1s ease-in;
+            animation: slide-up 1s ease-in;
+  }
+
+  .xl\:animate-slide-up-1-out {
+    -webkit-animation: slide-up 1s ease-out;
+            animation: slide-up 1s ease-out;
+  }
 }
 
 @media (min-width: 1536px) {
@@ -184196,5 +184421,30 @@ video {
   .\32xl\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .\32xl\:animate-slide-up-03-in {
+    -webkit-animation: slide-up 0.3s ease-in;
+            animation: slide-up 0.3s ease-in;
+  }
+
+  .\32xl\:animate-slide-up-03-out {
+    -webkit-animation: slide-up 0.3s ease-out;
+            animation: slide-up 0.3s ease-out;
+  }
+
+  .\32xl\:animate-slide-left-06-out {
+    -webkit-animation: slide-left 0.6s ease-out;
+            animation: slide-left 0.6s ease-out;
+  }
+
+  .\32xl\:animate-slide-up-1-in {
+    -webkit-animation: slide-up 1s ease-in;
+            animation: slide-up 1s ease-in;
+  }
+
+  .\32xl\:animate-slide-up-1-out {
+    -webkit-animation: slide-up 1s ease-out;
+            animation: slide-up 1s ease-out;
   }
 }
