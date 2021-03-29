@@ -9,7 +9,7 @@ const AccountCard: React.FC<IProps> = ({ account }) => (
     className={` group w-full rounded-lg p-4 flex items-center bg-gray-50 cursor-pointer mb-3 border border-solid border-white hover:border-blue-400 transition-all duration-300 relative`}
   >
     {account?.discounts && account.discounts.length > 0 && (
-      <div className="absolute top-0 right-0 rounded-full bg-yellow-500 transform -translate-y-1/3 px-1 animate-bounce">
+      <div className="absolute top-0 right-0 rounded-full bg-yellow-500 px-1 animate-bounce">
         <p className=" text-white">Offer Available!</p>
       </div>
     )}

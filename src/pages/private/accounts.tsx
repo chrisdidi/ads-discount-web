@@ -26,7 +26,7 @@ const Accounts = () => {
     <div className=" w-full p-3 min-h-screen bg-blue-50">
       <div className=" w-full max-w-md">
         <h1 className=" text-gray-600 font-bold text-2xl mb-3">
-          Select an Ad Account
+          Select an Ad Account ({data?.myAdAccounts?.data.length})
         </h1>
         {loading && <Loader />}
         {!loading && error && (
