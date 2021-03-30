@@ -3,9 +3,11 @@ import { AccountType } from "../../types/schema";
 
 interface IProps {
   account: AccountType;
+  onSelect: (id: number) => void;
 }
-const AccountCard: React.FC<IProps> = ({ account }) => (
+const AccountCard: React.FC<IProps> = ({ account, onSelect }) => (
   <div
+    onClick={account?.id ? onSelect.bind(this, account.id) : () => {}}
     className={` group w-full rounded-lg p-4 flex items-center bg-gray-50 cursor-pointer mb-3 border border-solid border-white hover:border-blue-400 transition-all duration-300 relative`}
   >
     {account?.discounts && account.discounts.length > 0 && (
