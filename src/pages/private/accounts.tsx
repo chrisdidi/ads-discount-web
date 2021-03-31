@@ -4,10 +4,10 @@ import { RouteComponentProps, withRouter } from "react-router";
 import AccountCard from "../../components/account-card/account-card";
 import ErrorAlert from "../../components/error-alert";
 import Loader from "../../components/loader";
-import { GetMyAccountType } from "../../types/queries";
+import { MyAdAccounts } from "../../__generated__/MyAdAccounts";
 
 const GET_MY_ACCOUNTS = gql`
-  {
+  query MyAdAccounts {
     myAdAccounts {
       data {
         id
@@ -22,7 +22,7 @@ const GET_MY_ACCOUNTS = gql`
 
 interface IProps extends RouteComponentProps<any> {}
 const Accounts: React.FC<IProps> = ({ history }) => {
-  const { data, loading, error } = useQuery<GetMyAccountType>(GET_MY_ACCOUNTS);
+  const { data, loading, error } = useQuery<MyAdAccounts>(GET_MY_ACCOUNTS);
 
   const onCardClicked = useCallback(
     (id) => {

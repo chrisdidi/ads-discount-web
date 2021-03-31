@@ -24,6 +24,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "apollo:codegen": "apollo client:codegen src/__generated__ --target=typescript --outputFlat",
     "tailwind:build": "tailwind build ./src/styles/tailwind.css -o ./src/styles/styles.css",
     "start": "react-scripts start",
     "start:dev": "cross-env NODE_ENV=development react-scripts start",
