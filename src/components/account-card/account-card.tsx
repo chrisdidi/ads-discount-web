@@ -1,5 +1,5 @@
 import React from "react";
-import { AccountType } from "../../types/schema";
+import { AccountType } from "../../types/general";
 
 interface IProps {
   account: AccountType;
