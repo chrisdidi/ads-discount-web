@@ -1,6 +1,7 @@
 import { useQuery } from "@apollo/client";
 import gql from "graphql-tag";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
+import { useOnClickOutside } from "../../hooks/useOnClickOutside";
 import {
   getMyDiscounts,
   getMyDiscountsVariables,
@@ -43,6 +44,9 @@ const ProfileHeader: React.FC<IProps> = ({ id }) => {
     },
   });
 
+  const headerRef = useRef(null);
+
+  useOnClickOutside(headerRef, () => setShowDiscounts(false));
   const toggleShow = () => {
     setShowDiscounts(!showDiscounts);
   };
@@ -75,9 +79,11 @@ const ProfileHeader: React.FC<IProps> = ({ id }) => {
   );
   if (!loading && data?.myDiscounts.data) {
     return (
-      <div className=" w-full fixed top-0 left-0 ">
+      <div ref={headerRef} className=" w-full fixed top-0 left-0 ">
         <div className="bg-yellow-200 flex justify-between items-center p-2 w-full relative">
-          <p className="text-yellow-700">{data.myDiscounts.data.name}</p>
+          <p className="text-yellow-700 font-semibold">
+            {data.myDiscounts.data.name}
+          </p>
           {data.myDiscounts.data.discounts &&
             data.myDiscounts.data.discounts.length > 0 && (
               <div
