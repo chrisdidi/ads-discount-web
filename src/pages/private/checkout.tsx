@@ -1,6 +1,8 @@
 import { gql, useQuery } from "@apollo/client";
 import React from "react";
 import { RouteComponentProps, withRouter } from "react-router";
+import AdCard from "../../components/ad-card/ad-card";
+import Loader from "../../components/loader";
 import ProfileHeader from "../../components/profile-header/profile-header";
 import { AllAdTypes } from "../../__generated__/AllAdTypes";
 
@@ -26,8 +28,25 @@ const Checkout: React.FC<IProps> = ({ match }) => {
   const { data, loading, error } = useQuery<AllAdTypes>(ALL_ADS_TYPE);
 
   return (
-    <div className=" w-full min-h-screen bg-blue-100">
+    <div className=" w-full min-h-screen bg-blue-100 pt-14">
       <ProfileHeader id={id} />
+      {loading && <Loader />}
+      {!loading && data?.allAdTypes.data && (
+        <div className=" w-full p-3 max-w-lg">
+          <h1 className=" text-xl text-gray-600 font-bold mb-3">
+            Advertisement Package
+          </h1>
+          {data.allAdTypes.data.length > 0 ? (
+            data.allAdTypes.data.map((ad, index) => (
+              <AdCard key={`${ad.name}_${index}`} ad={ad} />
+            ))
+          ) : (
+            <p>
+              No advertisement package at the moment. Please try again later.
+            </p>
+          )}
+        </div>
+      )}
     </div>
   );
 };

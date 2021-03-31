@@ -57,7 +57,7 @@ const ProfileHeader: React.FC<IProps> = ({ id }) => {
         <span>with minimum purchase of {data.min_purchase} or more!</span>
       );
       return (
-        <div className=" p-2">
+        <div className=" p-2" key={`${data.adType.name}_${data.adType.price}`}>
           <p className=" font-semibold">{data.adType.name}</p>
           {data.newPrice !== null && (
             <p>
