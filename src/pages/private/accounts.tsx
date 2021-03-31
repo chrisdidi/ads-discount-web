@@ -26,12 +26,12 @@ const Accounts: React.FC<IProps> = ({ history }) => {
 
   const onCardClicked = useCallback(
     (id) => {
-      history.push("/account/" + id);
+      history.push("/checkout/" + id);
     },
     [history]
   );
   return (
-    <div className=" w-full p-3 min-h-screen bg-blue-100">
+    <div className=" w-full p-4 min-h-screen bg-blue-100">
       <div className=" w-full max-w-md">
         <h1 className=" text-gray-600 font-bold text-2xl mb-3">
           Select an Ad Account ({data?.myAdAccounts?.data.length || 0})
