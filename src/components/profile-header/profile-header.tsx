@@ -79,7 +79,7 @@ const ProfileHeader: React.FC<IProps> = ({ id }) => {
   );
   if (!loading && data?.myDiscounts.data) {
     return (
-      <div ref={headerRef} className=" w-full fixed top-0 left-0 ">
+      <div ref={headerRef} className=" w-full fixed top-0 left-0 z-20">
         <div className="bg-yellow-200 flex justify-between items-center p-2 w-full relative">
           <p className="text-yellow-700 font-semibold">
             {data.myDiscounts.data.name}
@@ -94,11 +94,11 @@ const ProfileHeader: React.FC<IProps> = ({ id }) => {
               </div>
             )}
           <div
-            className={`w-full rounded-lg overflow-hidden absolute bg-red-50 top-full left-0 h-auto transition-all duration-500 ${
+            className={`w-auto px-2 mt-2 overflow-hidden absolute  top-full right-0 h-auto transition-all duration-500 ${
               showDiscounts ? "max-h-screen " : "max-h-0"
             }`}
           >
-            <div className=" w-full p-3 text-gray-600">
+            <div className=" w-full p-3 mb-2 text-gray-600 bg-red-50 rounded-lg shadow-md ">
               <p className=" font-semibold text-lg ">
                 We have a special package for you!
               </p>
