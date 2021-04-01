@@ -67,7 +67,6 @@ export const CartStoreProvider: React.FC = ({ children }) => {
   const onUpdateCart = ({ adId, accountId, quantity }: onUpdateProps) => {
     let adIndex = options?.cart.findIndex((a) => a.id === adId);
     if (adIndex !== undefined && adIndex > -1) {
-      console.log(options?.cart[adIndex].quantity);
       quantity = (options?.cart[adIndex].quantity || 0) + quantity;
     }
     const currentCart = options?.cart.map((item) => ({
