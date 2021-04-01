@@ -15,6 +15,8 @@ export interface UpdateCart_updateCart_data_cart {
   price: number;
   name: string;
   quantity: number;
+  free: number | null;
+  discountedPrice: number | null;
 }
 
 export interface UpdateCart_updateCart_data {

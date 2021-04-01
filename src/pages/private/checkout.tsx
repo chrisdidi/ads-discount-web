@@ -2,6 +2,7 @@ import { gql, useQuery } from "@apollo/client";
 import React from "react";
 import { RouteComponentProps, withRouter } from "react-router";
 import AdCard from "../../components/ad-card/ad-card";
+import Cart from "../../components/cart/cart";
 import Loader from "../../components/loader";
 import ProfileHeader from "../../components/profile-header/profile-header";
 import { CartStoreProvider } from "../../context/cartStore";
@@ -26,7 +27,7 @@ const ALL_ADS_TYPE = gql`
 interface IProps extends RouteComponentProps<RouteProps> {}
 const Checkout: React.FC<IProps> = ({ match }) => {
   const id = parseInt(match.params.id);
-  const { data, loading, error } = useQuery<AllAdTypes>(ALL_ADS_TYPE);
+  const { data, loading } = useQuery<AllAdTypes>(ALL_ADS_TYPE);
 
   return (
     <CartStoreProvider>
@@ -50,6 +51,7 @@ const Checkout: React.FC<IProps> = ({ match }) => {
           </div>
         )}
       </div>
+      <Cart accountId={id} />
     </CartStoreProvider>
   );
 };

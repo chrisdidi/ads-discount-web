@@ -15,6 +15,7 @@ interface onUpdateProps {
 
 interface IContextProps {
   options: UpdateCart_updateCart_data;
+  itemsCounts: number;
   loading: boolean;
   error?: any;
   onUpdateCart: (updateVariables: onUpdateProps) => any;
@@ -44,6 +45,8 @@ const UPDATE_CART = gql`
           price
           name
           quantity
+          free
+          discountedPrice
         }
         originalPrice
         discountedPrice
@@ -95,7 +98,13 @@ export const CartStoreProvider: React.FC = ({ children }) => {
 
   return (
     <cartStore.Provider
-      value={{ options, loading, error, onUpdateCart, customError }}
+      value={{
+        options,
+        loading,
+        error,
+        onUpdateCart,
+        customError,
+      }}
     >
       {children}
     </cartStore.Provider>

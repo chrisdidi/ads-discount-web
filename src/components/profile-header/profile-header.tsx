@@ -35,14 +35,14 @@ interface IProps {
 }
 const ProfileHeader: React.FC<IProps> = ({ id }) => {
   const [showDiscounts, setShowDiscounts] = useState(false);
-  const { data, loading, error } = useQuery<
-    getMyDiscounts,
-    getMyDiscountsVariables
-  >(MY_DISCOUNTS, {
-    variables: {
-      id,
-    },
-  });
+  const { data, loading } = useQuery<getMyDiscounts, getMyDiscountsVariables>(
+    MY_DISCOUNTS,
+    {
+      variables: {
+        id,
+      },
+    }
+  );
 
   const headerRef = useRef(null);
 

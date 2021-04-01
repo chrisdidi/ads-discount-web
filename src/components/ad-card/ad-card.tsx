@@ -9,7 +9,7 @@ interface IProps {
   accountId: number;
 }
 const AdCard: React.FC<IProps> = ({ ad, accountId }) => {
-  const { onUpdateCart, loading, customError, options } = useContext(cartStore);
+  const { onUpdateCart, loading, customError } = useContext(cartStore);
 
   return (
     <div className=" p-3 bg-gray-50 rounded-lg mb-3 flex justify-between items-center">
