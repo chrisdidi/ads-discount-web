@@ -66,11 +66,13 @@ const Cart: React.FC<IProps> = ({ accountId }) => {
                   options?.discountedPrice || options?.originalPrice
                 }`}
               />
-              {options?.discountedPrice && (
-                <p className=" text-gray-600 italic mt-2 text-sm">
-                  Original Price: RM{options.originalPrice}
-                </p>
-              )}
+              {options?.discountedPrice !== undefined &&
+                options?.discountedPrice > 0 &&
+                options.discountedPrice !== options.originalPrice && (
+                  <p className=" text-gray-600 italic mt-2 text-sm">
+                    Actual Price: RM{options.originalPrice}
+                  </p>
+                )}
             </div>
           </div>
         </div>
